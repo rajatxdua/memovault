@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tailwind dark mode utility classes for backgrounds and text */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #18181b;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Animated Backgrounds */
+@keyframes bgMotionBlue {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes bgMotionPeach {
+  0% { background-position: 50% 0%; }
+  50% { background-position: 50% 100%; }
+  100% { background-position: 50% 0%; }
+}
+@keyframes bgMotionGreen {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+@keyframes bgMotionPurple {
+  0% { background-position: 100% 0%; }
+  50% { background-position: 0% 100%; }
+  100% { background-position: 100% 0%; }
+}
+@keyframes bgMotionCyber {
+  0% { background-position: 0% 100%; }
+  50% { background-position: 100% 0%; }
+  100% { background-position: 0% 100%; }
+}
+@keyframes bgMotionMint {
+  0% { background-position: 100% 100%; }
+  50% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+.motion-blue {
+  background-size: 200% 200%;
+  animation: bgMotionBlue 12s ease-in-out infinite;
+}
+.motion-peach {
+  background-size: 200% 200%;
+  animation: bgMotionPeach 14s ease-in-out infinite;
+}
+.motion-green {
+  background-size: 200% 200%;
+  animation: bgMotionGreen 16s ease-in-out infinite;
+}
+.motion-purple {
+  background-size: 200% 200%;
+  animation: bgMotionPurple 18s ease-in-out infinite;
+}
+.motion-cyber {
+  background-size: 200% 200%;
+  animation: bgMotionCyber 20s ease-in-out infinite;
+}
+.motion-mint {
+  background-size: 200% 200%;
+  animation: bgMotionMint 15s ease-in-out infinite;
+}
+
+/* Chatbox animated glow for each theme */
+.glow-blue {
+  box-shadow: 0 0 40px 10px #a7ffeb80, 0 0 0 0 #fff0;
+  animation: glowBlue 3s ease-in-out infinite alternate;
+}
+@keyframes glowBlue {
+  0% { box-shadow: 0 0 40px 10px #a7ffeb80, 0 0 0 0 #fff0; }
+  100% { box-shadow: 0 0 60px 20px #7c3aed80, 0 0 0 0 #fff0; }
+}
+.glow-peach {
+  box-shadow: 0 0 40px 10px #ffd6a580, 0 0 0 0 #fff0;
+  animation: glowPeach 3s ease-in-out infinite alternate;
+}
+@keyframes glowPeach {
+  0% { box-shadow: 0 0 40px 10px #ffd6a580, 0 0 0 0 #fff0; }
+  100% { box-shadow: 0 0 60px 20px #ffb34780, 0 0 0 0 #fff0; }
+}
+.glow-green {
+  box-shadow: 0 0 40px 10px #b2f5ea80, 0 0 0 0 #fff0;
+  animation: glowGreen 3s ease-in-out infinite alternate;
+}
+@keyframes glowGreen {
+  0% { box-shadow: 0 0 40px 10px #b2f5ea80, 0 0 0 0 #fff0; }
+  100% { box-shadow: 0 0 60px 20px #38b2ac80, 0 0 0 0 #fff0; }
+}
+.glow-purple {
+  box-shadow: 0 0 40px 10px #c4b5fd80, 0 0 0 0 #fff0;
+  animation: glowPurple 3s ease-in-out infinite alternate;
+}
+@keyframes glowPurple {
+  0% { box-shadow: 0 0 40px 10px #c4b5fd80, 0 0 0 0 #fff0; }
+  100% { box-shadow: 0 0 60px 20px #a78bfa80, 0 0 0 0 #fff0; }
+}
+.glow-cyber {
+  box-shadow: 0 0 40px 10px #818cf880, 0 0 0 0 #fff0;
+  animation: glowCyber 3s ease-in-out infinite alternate;
+}
+@keyframes glowCyber {
+  0% { box-shadow: 0 0 40px 10px #818cf880, 0 0 0 0 #fff0; }
+  100% { box-shadow: 0 0 60px 20px #312e8180, 0 0 0 0 #fff0; }
+}
+.glow-mint {
+  box-shadow: 0 0 40px 10px #a7f3d080, 0 0 0 0 #fff0;
+  animation: glowMint 3s ease-in-out infinite alternate;
+}
+@keyframes glowMint {
+  0% { box-shadow: 0 0 40px 10px #a7f3d080, 0 0 0 0 #fff0; }
+  100% { box-shadow: 0 0 60px 20px #2dd4bf80, 0 0 0 0 #fff0; }
+}
+/* Glow Hover Default */
+.glow-hover {
+  box-shadow: 0 0 80px 30px #7c3aed80, 0 0 0 0 #fff0 !important;
+  transition: box-shadow 0.3s;
+  animation: none !important;
+}
+
+/* Theme Specific Hover Glows */
+.glow-blue.glow-hover { box-shadow: 0 0 80px 30px #7c3aedcc !important; }
+.glow-peach.glow-hover { box-shadow: 0 0 80px 30px #ffb347cc !important; }
+.glow-green.glow-hover { box-shadow: 0 0 80px 30px #00ffcccc !important; }
+.glow-purple.glow-hover { box-shadow: 0 0 80px 30px #a855f7cc !important; }
+/* Add other theme variants here */
+
+/* Strong border glow utility for chatbox */
+.border-glow {
+  box-shadow: 0 0 0 4px #7c3aed, 0 0 24px 8px #7c3aed80, 0 0 60px 20px #7c3aed60;
+  transition: box-shadow 0.3s;
+  z-index: 1;
+}
+
+/* Strong border glow for chatbox: white in dark mode, black in light mode */
+.border-glow-white {
+  box-shadow: 0 0 0 40px #fff, 0 0 320px 120px #fff, 0 0 800px 320px #fff8;
+  transition: box-shadow 0.3s;
+  z-index: 1;
+}
+.border-glow-black {
+  box-shadow: 0 0 0 40px #222, 0 0 320px 120px #000c, 0 0 800px 320px #0008;
+  transition: box-shadow 0.3s;
+  z-index: 1;
+}
+
+/* Strong, visible border glow for chatbox on hover (default: black for light mode) */
+.border-glow-visible {
+  box-shadow:
+    0 0 0 8px #111,
+    0 0 64px 24px #000c,
+    0 0 240px 120px #0008,
+    0 0 480px 240px #0004;
+  transition: box-shadow 0.3s;
+  z-index: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+  .border-glow-visible {
+    box-shadow:
+      0 0 0 8px #fff,
+      0 0 64px 24px #fff,
+      0 0 240px 120px #fff8,
+      0 0 480px 240px #fff4 !important;
+  }
+}
